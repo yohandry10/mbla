@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md;
+  }
+}
+
+.parallax-container {
+  perspective: 1000px;
+}
+
+.hover-shadow {
+  transition: all 0.3s ease;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  transform: translateY(-2px);
+}
